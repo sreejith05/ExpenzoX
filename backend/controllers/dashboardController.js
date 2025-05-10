@@ -71,7 +71,7 @@ exports.getDashboardData = async (req, res) => {
             total: expensesLast30Days,
             transactions: last30DaysExpenseTransactions,
         },
-        last60daysIncome: {
+        last60DaysIncome: {
             total: incomeLast60Days,
             transactions: last60DaysIncomeTransactions,
         },
