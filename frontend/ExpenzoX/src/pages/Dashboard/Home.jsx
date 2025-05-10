@@ -16,7 +16,7 @@ import Last30DaysExpenses from "../../components/Dashboard/last30DaysExpenses";
 import RecentIncomeWithChart from "../../components/Dashboard/RecentIncomeWithChart";
 import RecentIncome from "../../components/Dashboard/RecentIncome";
 const Home = () => {
-  useUserAuth();
+  const userCon = useUserAuth();
 
   const navigate = useNavigate();
   const [dashboardData, setDashboardData] = useState(null);
@@ -24,9 +24,9 @@ const Home = () => {
 
   const fetchDashboardData = async () => {
     if (loading) return;
-    setLoading(true);
-
+    
     try {
+      setLoading(true);
       const response = await axiosInstance.get(
         `${API_PATHS.DASHBOARD.GET_DATA}`
       );

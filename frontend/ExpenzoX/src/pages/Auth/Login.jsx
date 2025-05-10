@@ -36,10 +36,10 @@ const Login = () => {
         password,
       });
       const { token, user } = response.data;
-
+      console.log(response.data)
       if(token) {
         localStorage.setItem("token", token);
-        updateUser(user);
+        updateUser(response.data?.user);
         navigate("/dashboard");
       }
     } catch (error) {

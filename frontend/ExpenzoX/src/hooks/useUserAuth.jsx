@@ -6,6 +6,7 @@ import { API_PATHS } from "../utils/apiPaths";
 
 export const useUserAuth = () => {
   const { user, updateUser, clearUser } = useContext(UserContext);
+  // console.log(user)
   const navigate = useNavigate();
 
   useEffect(() => {
