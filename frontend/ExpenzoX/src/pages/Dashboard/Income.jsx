@@ -99,7 +99,7 @@ const Income = () => {
   };
 
   // Handle download income details
-  const handleDownloadExpenseDetails = async () => {
+  const handleDownloadIncomeDetails = async () => {
     try {
       const response = await axiosInstance.get(
         API_PATHS.INCOME.DOWNLOAD_INCOME,
