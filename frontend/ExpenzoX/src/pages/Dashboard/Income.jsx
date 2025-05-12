@@ -160,7 +160,7 @@ const Income = () => {
         <Modal 
             isOpen={openDeleteAlert.show}
             onClose={() => setOpenDeleteAlert({ show: false, data: null})}
-            totle="Delete Income"
+            title="Delete Income"
           >
             <DeleteAlert
               content="Are you sure you want to delete this income?"
