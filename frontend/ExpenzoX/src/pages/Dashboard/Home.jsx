@@ -78,12 +78,10 @@ const Home = () => {
             transactions={dashboardData?.recentTransactions}
             onSeeMore={() => navigate("/expense")}
           />
-        
-
-          <FinanceOverview
+            <FinanceOverview
             totalBalance={dashboardData?.totalBalance || 0}
             totalIncome={dashboardData?.totalIncome || 0}
-            totalExpense={dashboardData?.totalExpense || 0}
+            totalExpense={dashboardData?.totalExpenses || 0}
           />
           
           <ExpenseTransactions

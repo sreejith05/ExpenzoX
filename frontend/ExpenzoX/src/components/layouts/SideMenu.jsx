@@ -8,9 +8,6 @@ const SideMenu = ({ activeMenu }) => {
   const { user, clearUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  console.log(JSON.stringify(user))
-  
-
   const handleClick = (route) => {
     if (route === "logout") {
       handleLogout();
@@ -26,7 +23,7 @@ const SideMenu = ({ activeMenu }) => {
   };
 
   return (
-    <div className=" w-64 h-[calc(100vh-61px)] bg-white border-r border-gray-200/50 p-5 sticky top-[61px] z-20">
+    <div className="w-64 h-[calc(100vh-61px)] bg-white dark:bg-gray-800 border-r border-gray-200/50 dark:border-gray-700 p-5 sticky top-[61px] z-20">
       <div className="flex flex-col items-center justify-center gap-3 mt-3 mb-7">
         {user?.profileImageUrl ? (
           <img
@@ -43,14 +40,16 @@ const SideMenu = ({ activeMenu }) => {
           />
         )}
 
-        <h5 className="text-gray-950 font-medium leading-6">{user?.fullName || ""}</h5>
+        <h5 className="text-gray-800 dark:text-white font-medium leading-6">{user?.fullName || ""}</h5>
       </div>
 
       {SIDE_MENU_DATA.map((item, index) => (
         <button
           key={`menu_${index}`}
-          className={`w-full flex items-center gap-4 text-[15px] ${
-            activeMenu === item.label ? "text-white bg-purple-500" : ""
+          className={`w-full flex items-center gap-4 text-[15px] transition-colors ${
+            activeMenu === item.label 
+              ? "text-white bg-purple-500" 
+              : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
           } py-3 px-6 rounded-lg mb-3`}
           onClick={() => handleClick(item.path)}
         >

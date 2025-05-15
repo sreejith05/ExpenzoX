@@ -15,7 +15,7 @@ const AddIncomeForm = ({ onAddIncome }) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow-md">
+    <div className="dark:bg-gray-800">
       <EmojiPickerPopup
         icon={income.icon}
         onSelect={(selectedIcon) => handleChange('icon', selectedIcon)}
@@ -27,6 +27,8 @@ const AddIncomeForm = ({ onAddIncome }) => {
         label="Income Source"
         placeholder="Freelance, Salary, etc"
         type="text"
+        labelClassName="text-gray-700 dark:text-white"
+        className="dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
       />
 
       <Input
@@ -34,6 +36,8 @@ const AddIncomeForm = ({ onAddIncome }) => {
         onChange={({ target }) => handleChange('amount', target.value)}
         label="Amount"
         type="number"
+        labelClassName="text-gray-700 dark:text-white"
+        className="dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
       />
 
       <Input
@@ -41,6 +45,8 @@ const AddIncomeForm = ({ onAddIncome }) => {
         onChange={({ target }) => handleChange('date', target.value)}
         label="Date"
         type="date"
+        labelClassName="text-gray-700 dark:text-white"
+        className="dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
       />
 
       <div className="flex justify-end mt-6">
