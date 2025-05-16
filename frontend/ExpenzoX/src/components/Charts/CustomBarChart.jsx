@@ -20,7 +20,7 @@ const CustomBarChart = ({data}) => {
 
     return (
       <div className="w-full h-full bg-transparent">
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={300} >
           <BarChart data={data}>
             <CartesianGrid stroke="none" />
 
@@ -36,7 +36,7 @@ const CustomBarChart = ({data}) => {
               className="text-gray-600 dark:text-gray-400" 
             />
 
-            <Tooltip content={
+            <Tooltip cursor={{fill: 'transparent'}} content={
               ({ active, payload }) => {
                 if (active && payload && payload.length) {
                   return (

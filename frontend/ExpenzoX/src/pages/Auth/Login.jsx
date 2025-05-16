@@ -56,22 +56,24 @@ const Login = () => {
         <p className="text-sm text-gray-600 dark:text-gray-300 mt-[5px] mb-6">
           Please enter your details to log in
         </p>
-        <form onSubmit={handleLogin}>          <Input
+        <form onSubmit={handleLogin}>          
+         <Input
             value={email}
             onChange={({ target }) => setEmail(target.value)}
             label="Email Address"
             placeholder="sree@example.com"
             type="text"
-            labelClassName="dark:text-white text-white"
+            labelClassName="text-white"
             className="dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
           />
-          <Input            value={password}
+          <Input            
+          value={password}
             onChange={({ target }) => setPassword(target.value)}
             label="Password"
-            placeholder="Min 8 Characters"
+            placeholder="Min 8 Characters" 
             type="password"
-            labelClassName="dark:text-white text-white"
-            className="dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
+            labelClassName="text-white"
+            className=" dark:bg-gray-700 dark:text-white border-none focus:ring-0 focus:border-none"
           />
 
           {error && <p className='text-red-500 text-xs pb-2.5'>{error}</p>}
